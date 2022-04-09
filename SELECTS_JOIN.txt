@@ -1,0 +1,9 @@
+SELECT
+	pg.name, pg.creation_date, pgo.name
+FROM 
+	public.products AS pg
+	
+JOIN public.products_group AS pgo ON pgo.id = pg.fk_products_group	
+	
+INSERT INTO public.products ("name",fk_products_group, creation_date, creation_time, creation_user)
+VALUES ('Tiago', 5, '23/12/200', '23:10:10', 'Tiaga')
